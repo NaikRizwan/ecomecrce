@@ -40,9 +40,14 @@ router.post("/log", async (req, res) => {
       const ismatch = await bcrypt.compare(password, userlogin.password);
       token = await userlogin.generateAuthToken();
 
+      // res.cookie("jwtoken", token, {
+      //   expires: new Date(Date.now() + 25892000000),
+      //   httpOnly: true,
+      // });
       res.cookie("jwtoken", token, {
         expires: new Date(Date.now() + 25892000000),
         httpOnly: true,
+        secure: true, // Ensure to set the secure flag
       });
 
       if (!ismatch) {
