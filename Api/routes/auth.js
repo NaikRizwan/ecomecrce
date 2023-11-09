@@ -49,7 +49,7 @@ router.post("/log", async (req, res) => {
         expires: new Date(Date.now() + 25892000000),
         httpOnly: true,
         secure: true,
-        SameSite: "None",
+        sameSite: "none",
         // Ensure to set the secure flag
       });
 
