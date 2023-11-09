@@ -52,7 +52,6 @@ router.post("/log", async (req, res) => {
           message: "user login succesfully",
           userlogin: userlogin,
         });
-        res.header("Access-Control-Allow-Origin", "*");
       }
     } else {
       res.status(400).json({ message: "invalid carendatinals " });

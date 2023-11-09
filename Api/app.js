@@ -9,7 +9,16 @@ const port = process.env.PORT || 3001; // You can change this port
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
+app.use((req, res, next) => {
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://zippy-kitsune-503e9c.netlify.app"
+  );
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+  // Additional headers as needed
+  // ...
+  next();
+});
 const data = require("./ProductData/data");
 dotenv.config({ path: "./config.env" });
 const cookieParser = require("cookie-parser");
