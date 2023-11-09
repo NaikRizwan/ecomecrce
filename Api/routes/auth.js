@@ -71,9 +71,17 @@ router.get("/riz", authh, (req, res) => {
 router.get("/rifat", authh, (req, res) => {
   res.json({ userDataa: true });
 });
+// router.get("/about", authh, (req, res) => {
+//   console.log("about");
+//   res.send(req.rootUser);
+// });
 router.get("/about", authh, (req, res) => {
-  console.log("about");
-  res.send(req.rootUser);
+  if (req.rootUser) {
+    // Assuming req.rootUser is an object
+    res.json(req.rootUser);
+  } else {
+    res.status(401).json({ error: "Unauthorized" }); // Sending a JSON object for unauthorized cases
+  }
 });
 
 router.get("/logout", authh, (req, res) => {
