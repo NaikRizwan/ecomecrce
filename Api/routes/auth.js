@@ -95,6 +95,7 @@ router.get("/about", authh, (req, res) => {
 router.get("/logout", authh, (req, res) => {
   res.clearCookie("jwtoken", {
     path: "/",
+    secure: true,
     sameSite: "none",
   });
   res.status(200).send("user logout");
