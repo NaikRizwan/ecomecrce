@@ -93,7 +93,10 @@ router.get("/about", authh, (req, res) => {
 });
 
 router.get("/logout", authh, (req, res) => {
-  res.clearCookie("jwtoken", { path: "/" });
+  res.clearCookie("jwtoken", {
+    path: "/",
+    sameSite: "none",
+  });
   res.status(200).send("user logout");
 });
 
