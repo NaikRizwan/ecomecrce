@@ -27,6 +27,7 @@ router.post("/reg", async (req, res) => {
     res.status(500).json({ error: "Registration failed" });
   }
 });
+
 router.post("/log", async (req, res) => {
   console.log("log is calling");
   try {
@@ -46,7 +47,7 @@ router.post("/log", async (req, res) => {
       // });
       res.cookie("jwtoken", token, {
         expires: new Date(Date.now() + 25892000000),
-        // httpOnly: true,
+        httpOnly: true,
         secure: true, // Ensure to set the secure flag
       });
 
