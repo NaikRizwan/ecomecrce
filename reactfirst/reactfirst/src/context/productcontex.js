@@ -22,16 +22,16 @@
 // // //       image:"images/logo.png",
 // // //       category:'pen'
 // // //     },
-  
+
 // // //     {
-  
+
 // //   //     id: 1,
 // //   //     name: 'Python ',
 // //   //     price: '64,999',
 // //   //     image:"images/logo.png",
 // //   //     category:'pen'
 // //   //   },
-  
+
 // //   //   {
 // //   //     id: 2,
 // //   //     name: 'UI/UX Program',
@@ -39,7 +39,7 @@
 // //   //     image:"images/logo.png",
 // //   //     category:'pen'
 // //   //   }
-  
+
 // //   // ]
 // // // const initialState = {
 // // //   isLoading: false,
@@ -191,8 +191,8 @@ import reducer from "../reducer/productReducer";
 
 const AppContext = createContext();
 // const API = "https://api.pujakaitem.com/api/products";
-//const API = "https://api.pujakaitem.com/api/products";
-  const API = "http://localhost:3001/api/data";
+const API = "https://jamia.onrender.com/api/data";
+// const API = "http://localhost:3001/api/data";
 // console.log("hello",API);
 const initialState = {
   isLoading: false,

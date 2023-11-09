@@ -12,8 +12,8 @@ import Star from "./components/Star";
 import AddToCart from "./components/AddToCart";
 
 // const API = "https://api.pujakaitem.com/api/products";
-// const API = "https://api.pujakaitem.com/api/products";
-const API = "http://localhost:3001/api/data";
+const API = "https://jamia.onrender.com/api/data";
+//const API = "http://localhost:3001/api/data";
 //  console.log(API);
 const SingleProduct = () => {
   const { getSingleProduct, isSingleLoading, singleProduct } =
